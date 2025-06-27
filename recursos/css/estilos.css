@@ -1,0 +1,178 @@
+/*Cuerpo del la pagina*/
+body{
+    background-color:#F5F5DC;
+    font-family:'Courier New', Courier, monospace;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    color: #333;
+}
+/*Logo*/
+.logo-img {
+    height: 70px;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-left: 50px;
+}
+
+.logo-img:hover{
+  transform: scale(1.3);
+}
+/*Sección que esta dentro del carrusel*/
+header{
+    margin: 0px;
+    color: #333;
+    text-align: center;
+    padding: 20px;
+}
+/*Titulo de las imagenes*/
+header .carousel-item h1{
+    text-align:justify;
+    text-transform: uppercase;
+    
+}
+/*Texto que esta dentro de las imagenes*/
+header p{
+    font-weight:bold;
+    margin: 2em;
+    text-align: center;
+}
+/*Border de las imagenes del carrusel*/
+header .carousel-inner{
+    border-radius: 20px 20px 20px 20px;
+}
+/*Estilos la sección del Nav*/
+nav{
+    background-color: #00BFFF;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+/*Estilos para ele ul*/
+nav ul{
+    list-style: none;
+    display: flex;
+    justify-content: end;
+    flex-wrap: wrap;
+    padding: 20px;
+    margin: 0px;
+    cursor: pointer;
+    gap: 20px;
+}
+/*Tamaño del nav*/
+nav ul li{
+    margin: 0 15px;
+    
+}
+/*Estilos para el texto del Nav*/
+nav ul li a{
+    text-decoration: none;
+    color:#2c2c2c;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+/*Cuerpo del contenido de Nuestros tours*/
+main {
+    background-color:#00BFFF;
+    /*display: flex;*/
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+}
+/*H2 del contenido principal*/
+main h2{
+    text-transform: uppercase;
+    padding: 10px;
+}
+/* Sección general */
+/*Contenedor principal*/
+.container-nosotros{
+  background-color: rgb(255, 255, 255);
+  min-width: 300px;
+}
+/*H2 que esta en el contenedor principal*/
+.container-nosotros h2{
+  color: red;
+  text-align: center;
+  padding: 20px;
+  font-style:oblique;
+}
+/*Bloque donde estan los articulos*/
+.conten-nosotros{
+  display: flex;
+  padding: 20px;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+/*estos son los articulos, donde esta el textoo*/
+.conten-nosotros article{
+    flex:1;
+    min-width: 200px;
+    background: #ffff;
+    padding: 10px;
+    border-radius: 20px;
+    box-shadow: 2px 2px 2px 2px #00BFFF;
+}
+/*Imagen que esta dentro del contenedor antes de los articulos*/
+.conten-nosotros img{
+  width: 300px;
+  height: 200px;
+  padding: 10px;
+  border-radius: 10px 10px 30px 30px;
+}
+/*Texto que esta entre la imagen y el contenedor*/
+.conten-nosotros h3{
+  padding: 20px;
+  font-weight: bold;
+  font-style: oblique;
+  text-align: center;
+}
+/*Estilos para el parrafo dentro del articulo*/
+.conten-nosotros p{
+  font-weight: 300;
+}
+/*Estilos para el formulario, modal*/
+/*:::Ventana Modal:::*/
+
+/*sección para cotizar*/
+
+/* Estilos para la sección de cotizar */
+/*seccion para comunicaciones*/
+.comunicate{
+  background-color:#00BFFF;
+  min-width: 300px;
+}
+.comunicate h2{
+  font-style: bold;
+  color: #333;
+  padding: 20px;
+  font-size: medium;
+  line-height: 50px;
+
+}
+.comunication{
+  display: flex;
+  color: #333;
+  display: block;
+  padding: 20PX;
+  font-size: medium;
+  line-height: 10px;
+}
+.comunication article{
+  flex: 1;
+  background-color:orange;
+}
+/*Sección para opiniones*/
+.opiniones{
+  background-color: #ffff;
+  padding: 20px;
+}
+/*última sección*/
+footer {
+    background-color:#00BFFF;
+    padding: 10px;
+}
+footer p{
+    text-align: center;
+}
