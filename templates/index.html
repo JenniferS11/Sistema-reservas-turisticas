@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Viajes y Turismo Uzathama S.A.S</title>
+  <link rel="stylesheet" href="../static/css/estilos.css">
+  <link rel="shortcut icon" href="../static/img/logo.png" type="image/x-icon">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+  
+
+</head>
+
+<body>
+  <!---Menú de navegación-->  
+ <nav class="navbar">
+  <div class="nav-container">
+    <img src="../static/img/logo.png" alt="Logo" class="logo-img" />
+    <!--<button class="menu-toggle" id="toggleMenu">
+      <i class="fas fa-bars"></i>
+    </button>-->
+  </div>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="index.html">Inicio</a></li>
+    <li><a href="#nosotros">Quiénes Somos</a></li>
+    <li><a href="#tours">Tours</a></li>
+    <li><a href="#comunicate">Contacto</a></li>
+    <li><a href="#" id="abrirModal">Reservar</a></li>
+    </ul>
+</nav>
+  <!---Fin del menú de navegación-->
+  <!---Sección de encabezado con carrusel de imágenes-->
+  <header>
+    <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="../static/img/vista-playa.png" class="d-block w-100" alt="Cartagena de indias">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Playas en Cartagena</h5>
+            <p>Descubre las hermosas playas de Cartagena, ideales para relajarte y disfrutar del sol y el mar Caribe.</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="../static/img/cartagena.png" class="d-block w-100" alt="cartagena">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>La ciudad amurallada de Cartagena</h5>
+            <p>La ciudad amurallada de Cartagena, un destino lleno de historia, cultura y encanto colonial.</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="../static/img/torre-reloj.png" class="d-block w-100" alt="Torre del Reloj">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Torre del Reloj</h5>
+            <p>Un ícono de la ciudad, la Torre del Reloj es el punto de entrada al centro histórico de Cartagena.</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="../static/img/castillo-san-felipe.png" class="d-block w-100" alt="Castillo de San Felipe">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Castillo de San Felipe</h5>
+            <p>Una fortaleza histórica que ofrece vistas panorámicas de la ciudad y el mar Caribe.</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="../static/img/botas-viejas.png" class="d-block w-100" alt="Monumento Botas Viejas">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Monumento Botas Viejas</h5>
+            <p>Un símbolo de la cultura cartagenera, el Monumento Botas Viejas es un homenaje a la tradición de los pescadores.</p>
+          </div>
+        </div>
+      </div>
+
+      <!--Botones de Navegación-->
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying"
+        data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying"
+        data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+    
+  </header>
+  <!--Sección sobre quiénes somos-->
+  <section id="nosotros" class="container-nosotros">
+      <h2>Sobre Nosotros</h2>
+      <div class="conten-nosotros">
+      <!--Artuclo 1-->
+      <article>
+        <img src="../static/img/castillo.png" alt="Castillo de San Felipe">
+         <div class="texto-articulo">
+        <h3>Ubicados en Cartagena de Indias -  Colombia</h3>
+        <p>Somos una Agencia de Viajes especializada en Cartagena de Indias, la joya del Caribe colombiano. 
+          Creemos que viajar es una forma de enriquecimiento personal, que nos permite descubrir paisajes únicos, sumergirnos en la historia y conectar con culturas extraordinarias. 
+          Nuestro compromiso es hacer de tu visita a Cartagena una experiencia inolvidable.
+          Diseñamos experiencias a medida, adaptadas a tus gustos y presupuesto.
+          Ya sea que desees relajarte en las playas de Barú, recorrer el Centro Histórico, explorar los manglares de La Boquilla o vivir una aventura gastronómica y cultural, tenemos el plan perfecto para ti. 
+          Déjanos ayudarte a crear recuerdos únicos en una de las ciudades más encantadoras de Colombia.
+        </p>
+         </div>
+      </article>
+      </div>
+    </section>
+    <!--Sección para collage de fotos-->
+    <section class="reserva-anticipada"  style="background-color: #5783c3">
+  <h2>Reserva tus Vacaciones</h2>
+  <div class="reserva-flex" >
+  <div class="reserva-texto">
+  <p>
+    Sabemos que planear tus vacaciones con tiempo puede ser una gran ventaja, ¡y es por eso que te invitamos a reservar tu escapada favorita del 2025 desde ahora mismo!<br><br>
+
+    Al reservar con anticipación, podrás asegurarte de obtener las mejores tarifas disponibles en cualquier destino que elijas. Además, tendrás la tranquilidad de tener tu viaje organizado con tiempo y evitar sorpresas de último momento.<br><br>
+
+    No importa si viajas solo, en pareja, con amigos o en familia, hay opciones para todos los gustos y presupuestos.<br><br>
+
+    ¡No esperes más! Contáctanos y reserva tus vacaciones ahora mismo. Recuerda que las mejores tarifas se agotan rápidamente, así que no dejes pasar esta oportunidad única.<br><br>
+
+    ¡Te esperamos para hacer realidad tus sueños de viaje!
+  </p>
+  </div>
+  <div class="galeria-collage">
+    <img src="../static/img/botas-viejas.png" alt="Botas Viejas">
+    <img src="../static/img/cartagena.png" alt="Cartagena">
+    <img src="../static/img/castillo.png" alt="Castillo de San Felipe">
+    <img src="../static/img/pasadia.png" alt="Pasadía">
+    <img src="../static/img/chiva-rumbera.png" alt="Chiva Rumbera">
+    <img src="../static/img/torre-reloj.png" alt="Torre del Reloj">
+    <img src="../static/img/torre-reloj.png" alt="Torre del Reloj">
+    <img src="../static/img/torre-reloj.png" alt="Torre del Reloj">
+
+  </div>
+  </div>
+</section>
+
+<!-- Modal para ampliar imagen -->
+<div class="modal-imagen" id="modalImagen">
+  <span id="cerrarModal">&times;</span>
+  <img class="modal-contenido" id="imagenAmpliada">
+</div>
+<!-- Fin del modal para ampliar imagen -->
+  <!--Sección para collage de fotos e../statico-->
+   <section id="collage" class="container my-5">
+  <h2 class="text-center mb-4" id="texto-collage">Descubre Cartagena</h2>
+  
+  <!-- Fila 1 -->
+  <div class="row">
+     <div class="col-md-4 mb-4">
+      <img src="../static/img/pasadia2.jpg" class="img-fluid" alt="Pasadía">
+    </div>
+     <div class="col-md-4 mb-4">
+      <img src="../static/img/plaza.png" class="img-fluid" alt="Plaza">
+    </div>
+    <div class="col-md-4 mb-4">
+      <img src="../static/img/cityS.png" class="img-fluid" alt="City Sightseeing">
+    </div>
+  </div>
+
+  <!-- Fila 2 -->
+  <div class="row">
+      <div class="col-md-4 mb-4">
+      <img src="../static/img/muelle-p.png" class="img-fluid" alt="Muelle de los Pegasos">
+    </div>
+     <div class="col-md-4 mb-4">
+      <img src="../static/img/murallas.png" class="img-fluid" alt="Monumento Murallas">
+    </div>
+     <div class="col-md-4 mb-4">
+      <img src="../static/img/centro-historico.png" class="img-fluid" alt="Centro Histórico">
+    </div>
+  </div>
+
+    </section>
+    <!--fin del collage de fotos e../statico-->
+  <!--Contenido Carrusel de los Tours-->
+  <main>
+    <section id="tours" class="container my-5">
+      <h2 class="text-center mb-4" id="texto-tours">Nuestros Tours</h2>
+      <div id="carouselCards" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+
+          <div class="carousel-item active">
+            <div class="d-flex justify-content-center gap-3">
+              <div class="card" style="width: 18rem;">
+                <img src="../static/img/playa.jpg" class="card-img-top" alt="Islas Cartagena">
+                <div class="card-body">
+                  <h3 class="card-title">Playas Privadas (Islas del Rosario)</h3>
+                    <p class="card-text"><em>Vive la experiencia exclusiva de relajarte en playas privadas de las Islas del Rosario.</em></p>
+                    <a href="islas-rosario.html" class="btn btn-primary mt-2">Ver más</a>
+
+                </div>
+              </div>
+
+              <div class="card" style="width: 18rem;">
+                <img src="../static/img/pasadia2.jpg" class="card-img-top" alt="Isla Tierra Bomba">
+                <div class="card-body">
+                  <h3 class="card-title">Playas Privadas (Tierra Bomba)</h3>
+                    <p class="card-text"><em>Disfruta de las exclusivas playas privadas de Tierra Bomba, un paraíso cerca de Cartagena.</em></p>
+                    <a href="isla-tierra-bomba.html" class="btn btn-primary mt-2">Ver más</a>
+
+                
+                  </div>
+              </div>
+
+              <div class="card" style="width: 18rem;">
+                <img src="../static/img/tayrona.png" class="card-img-top" alt="Parque Tayrona">
+                <div class="card-body">
+                  <h3 class="card-title">Tours Barranquilla y Santa Marta</h3>
+                <p class="card-text"><em>¡Explora Barranquilla y Santa Marta con nuestros tours llenos de historia, cultura y diversión!</em></p>
+                  <a href="tours_quilla-sama.html" class="btn btn-primary mt-2" style="align-items: center;" >Ver más</a>
+
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="carousel-item">
+            <div class="d-flex justify-content-center gap-3">
+              <div class="card" style="width: 18rem;">
+                <img src="../static/img/bahiaC.png" class="card-img-top" alt="Bahía de Cartagena">
+                <div class="card-body">
+                  <h3 class="card-title">Tours por la Bahía</h3>
+                    <p class="card-text"><em>Disfruta de un tour inolvidable por la bahía de Cartagena, con vistas panorámicas y atardeceres espectaculares.</em></p>
+                                        <a href="tours-bahia.html" class="btn btn-primary mt-2">Ver más</a>
+
+                </div>
+              </div>
+              <div class="card" style="width: 18rem;">
+                <img src="../static/img/baru.png" class="card-img-top" alt="Islas de Barú">
+                <div class="card-body">
+                  <h3 class="card-title">Pasadías y Tours en Barú</h3>
+                    <p class="card-text"><em>Disfruta de pasadías y tours inolvidables en Barú, con playas de arena blanca y aguas cristalinas.</em></p>
+                                        <a href="islas-baru.html" class="btn btn-primary mt-2">Ver más</a>
+
+                </div>
+              </div>
+              <div class="card" style="width: 18rem;">
+                <img src="../static/img/cityS.png" class="card-img-top" alt="City Sightseeing">
+                <div class="card-body">
+                  <h3 class="card-title">City Tours - Party Bus</h3>
+                    <p class="card-text"><em>Recorre Cartagena en un City Tour o disfruta la fiesta a bordo del Party Bus.</em></p>
+                                      <a href="city-tours.html" class="btn btn-primary mt-2">Ver más</a>
+
+                </div>
+              </div>
+              <!-- Desde esta sección puedo agregar más tarjetas -->
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Controles para el carrusel -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselCards" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Anterior</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselCards" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Siguiente</span>
+        </button>
+      </div>
+    </section>
+    <!-- Fin del carrusel de tarjetas -->
+    <!--Seccion para reservar-->
+<!--Ventana Modal // Para reservar-->
+<div class="modal-reserva-container" id="reserva">
+  <div class="modal-reserva-content">
+    <section class="form-reserva">
+      <img src="../static/img/logo.png" alt="" style="width: 100px;">
+      <center><h4 id="tituloReserva">Reserva con Nosotros</h4></center>
+      <form id="formReserva">
+        <input class="input-reserva" type="number" name="id" maxlength="10" placeholder="Número de Identificación">
+        <input class="input-reserva" type="text" name="nombres_completos" placeholder="Nombres Completos">
+        <input class="input-reserva" type="email" name="correo" placeholder="Correo Electrónico">
+        <input class="input-reserva" type="number" name="telefono" placeholder="Teléfono">
+        <input class="input-reserva" type="date" name="fecha_inicio" placeholder="Fecha Estimada de Viaje">
+        <input class="input-reserva" type="date" name="fecha_fin" placeholder="Fecha Estimada de Fin de Viaje">
+        <select class="input-reserva" name="destino" required>
+          <option value="" disabled selected>Seleccione un Destino</option>
+          <option value="islas_del_rosario">Islas del Rosario</option>
+          <option value="tierra_bomba">Tierra Bomba</option>
+          <option value="tours_bquilla_sama">Tours Barranquilla y Santa Marta</option>
+          <option value="tours_bahia">Tours Por la Bahía</option>
+          <option value="pasadias_tours_baru">Pasadías y Tours en Barú</option>
+          <option value="punta_arena">Punta Arena</option>
+        </select>
+        <select class="input-reserva" name="tipo_tour" required>
+          <option value="" disabled selected>Seleccione Número de Personas</option>
+          <option value="1">1 Persona</option>
+          <option value="2">2 Personas</option> 
+          <option value="3">3 Personas</option>
+          <option value="4">4 Personas o Más</option>
+        </select>
+        <textarea class="input-reserva" name="mensaje" placeholder="Mensaje"></textarea>
+        <input class="btn-reserva" type="submit" value="Enviar">
+      </form>
+      <div id="mensajeExito" style="display: none;">¡Reserva enviada con éxito!</div>
+      <div class="btn-cerrar">
+        <span class="cerrar-reserva">Cerrar</span>
+      </div>
+    </section>
+  </div>
+</div>
+
+
+  <!-- Fin de la ventana modal -->
+   <!--Sección para comunicarse-->
+<section class="comunicate" id="comunicate">
+  <h2>Comunícate con Nosotros</h2>
+  <div class="comunicate-contenido">
+
+    <!-- Información de contacto -->
+    <div class="contacto-info">
+      <p><i class="fas fa-phone"></i> <strong>Teléfono:</strong> (+57) 3161600681</p>
+      <p><i class="fas fa-envelope"></i> <strong>Correo:</strong> Comercial@viajesyturismouzathama.com</p>
+      <p><i class="fas fa-map-marker-alt"></i> <strong>Dirección:</strong> Calle 123, Centro Histórico, Cartagena</p>
+      <p><i class="fas fa-clock"></i> <strong>Horario:</strong> Lunes a Domingo, 7:00 AM – 8:00 PM</p>
+      <p><i class="fas fa-calendar-check"></i> <strong>Reservas:</strong> Escríbenos o reserva desde el formulario</p>
+    </div>
+
+    <!-- Mapa -->
+    <div class="contacto-mapa">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3916.284726076954!2d-75.548482!3d10.3910496!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8ef6259ab1fdb30f%3A0xa3c90f7ea3c13a35!2sCartagena%2C%20Bol%C3%ADvar!5e0!3m2!1ses!2sco!4v1719988888888"
+        width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    </div>
+
+  </div>
+</section>
+  <!--Fin de la sección para comunicarse-->
+  </main>
+  
+  <!--Final de página, información extra-->
+  <footer>
+    <div class="footer-icons">
+      <a href="https://www.instagram.com/" target="_blank" title="Instagram">
+        <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram" />
+      </a>
+      <a href="https://www.facebook.com/" target="_blank" title="Facebook">
+        <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook" />
+      </a>
+      <a href="https://wa.me/573161600681" target="_blank" title="WhatsApp">
+        <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp" />
+      </a>
+    </div>
+    <p>&copy; Viajes Y Turismo Uzathama - Todos los derechos reservados.</p>
+  </footer>
+  <!--Fin de la sección de pie de página-->
+ 
+  <!--Scripts necesarios para el funcionamiento del sitio-->
+  <script src="../static/js/script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

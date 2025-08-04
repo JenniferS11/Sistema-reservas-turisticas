@@ -1,0 +1,235 @@
+/* Login Page Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+/* Estilos del body */
+body {
+    background-color: #5783c3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    min-height: 100vh;
+}
+
+/* Contenedor principal */
+.containerPadre {
+    margin: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    max-width: 800px;
+    width: 100%;
+}
+
+/* Caja trasera */
+.caja__trasera {
+    padding: 10px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 45px;
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+    background-color: rgb(255, 255, 255);
+    flex-wrap: wrap;
+}
+
+.caja__trasera div {
+    margin: 100px 40px;
+    color: black;
+    transition: all 500ms;
+    text-align: center;
+}
+
+.caja__trasera div:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+.caja__trasera div p,
+.caja__trasera div button {
+    margin-top: 30px;
+}
+
+/* Estilos del logo */
+.container__loginR img {
+    display: block;
+    margin: 0 auto 20px auto;
+    width: 80px;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Estilos del texto dentro de la caja trasera */
+.caja__trasera div h3 {
+    font-weight: 400;
+    font-size: 26px;
+}
+
+/* Estilos del botón de la caja trasera */
+.caja__trasera button {
+    padding: 10px 40px;
+    border-radius: 10px;
+    background: transparent;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    color: black;
+    outline: none;
+    transition: all 300ms;
+}
+
+.caja__trasera button:hover {
+    background: black;
+    color: #fff;
+}
+
+/* Contenedor de login y registro */
+.container__loginR {
+    display: flex;
+    align-items: center;
+    max-width: 400px;
+    width: 100%;
+    position: relative;
+    top: -185px;
+    left: 10px;
+    bottom: 205px;
+    transition: left 500ms cubic-bezier(0.175, 0.885, 0.320, 1.275);
+}
+
+/* Formulario */
+.container__loginR form {
+    width: 100%;
+    padding: 50px 20px;
+    background: #fff;
+    position: absolute;
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.079) 0px 10px 10px 10px;
+}
+/* Estilos del formulario */
+.container__loginR form h2 {
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #5783c3;
+}
+/* Estilos de los inputs del formulario */
+.container__loginR form input {
+    font-size: 0.9em;
+    font-weight: 100;
+    width: 100%;
+    display: block;
+    padding: 0.8em;
+    border: 1px solid #5783c3;
+    border-radius: 6px;
+    box-shadow: rgba(50, 50, 93, 0.2) 0px 6px 12px -2px;
+    margin-bottom: 16px;
+}
+/* Estilos del button del formulario */
+.container__loginR form button {
+    padding: 10px 40px;
+    margin-top: 15px;
+    border: 2px solid #5783c3;
+    border-radius: 10px;
+    background: #5783c3;
+    font-size: 14px;
+    cursor: pointer;
+    color: white;
+    outline: none;
+    display: block;
+    margin: 15px auto 0 auto; /* centrado horizontal y margen superior */
+
+}
+.container__loginR form button:hover {
+    background: transparent;
+    color: #5783c3;
+    transition: all 300ms;
+}
+.container__loginR form p {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 14px;
+    color: #333;
+}
+
+/* Formularios específicos */
+.formulario__login {
+    opacity: 1;
+    display: block;
+}
+
+.formulario__registro {
+    display: none;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .containerPadre {
+        flex-direction: column;
+        margin: 40px 10px;
+    }
+
+    .caja__trasera {
+        flex-direction: column;
+        gap: 20px;
+        padding: 20px 10px;
+    }
+
+    .caja__trasera div {
+        margin: 40px 10px;
+    }
+
+    .container__loginR {
+        max-width: 100%;
+        left: 0;
+        top: 0;
+        bottom: 0;
+    }
+
+    .container__loginR form {
+        position: static;
+        padding: 30px 10px;
+        box-shadow: none;
+    }
+}
+
+@media (max-width: 600px) {
+    .containerPadre {
+        margin: 10px 0;
+    }
+
+    .caja__trasera {
+        border-radius: 10px;
+        padding: 10px 5px;
+    }
+
+    .caja__trasera div h3 {
+        font-size: 20px;
+    }
+
+    .container__loginR form h2 {
+        font-size: 22px;
+    }
+
+    .container__loginR img {
+        width: 60px;
+    }
+
+    .container__loginR form input {
+        font-size: 1em;
+        padding: 0.6em;
+    }
+
+    .container__loginR form button,
+    .caja__trasera button {
+        padding: 8px 20px;
+        font-size: 13px;
+    }
+}

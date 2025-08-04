@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<!-- Boxicons -->
+	<link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+	<!-- My CSS -->
+	<link rel="stylesheet" href="../static/css/styles.css">
+  <link rel="shortcut icon" href="../static/img/logo.png" type="image/x-icon">
+
+	<title>AdminHub</title>
+</head>
+<body>
+
+	<!-- SIDEBAR - barra lateral -->
+	<section id="sidebar">
+		<img src="../static/img/logo.png" class="brand">
+		<ul class="side-menu top">
+			<li class="menu-item active" data-section="dashboard">
+				<a href="#">
+					<i class='bx bxs-dashboard'></i>
+					<span class="text">Dashboard</span>
+				</a>
+			</li>
+			<li class="menu-item" data-section="reservas">
+				<a href="#">
+					<i class='bx bxs-calendar-check'></i>
+					<span class="text">Reservas</span>
+				</a>
+			</li>
+			<li class="menu-item" data-section="tours">
+				<a href="#">
+					<i class='bx bxs-map-alt'></i>
+					<span class="text">Tours</span>
+				</a>
+			</li>
+			<li class="menu-item" data-section="galeria">
+				<a href="#">
+					<i class='bx bxs-image'></i>
+					<span class="text">Galería</span>
+				</a>
+			</li>
+			<li class="menu-item" data-section="admin">
+				<a href="#">
+					<i class='bx bxs-user-circle'></i>
+					<span class="text">Administradores</span>
+				</a>
+			</li>
+		</ul>
+		<ul class="side-menu">
+			<li>
+				<a href="login.html" class="logout">
+					<i class='bx bxs-log-out-circle'></i>
+					<span class="text">Salir</span>
+				</a>
+			</li>
+		</ul>
+	</section>
+	<!-- SIDEBAR -->
+
+	<!-- CONTENT -->
+	<section id="content">
+		<!-- NAVBAR -->
+		<nav>
+			<i class='bx bx-menu'></i>
+			<a href="#" class="nav-link">Panel</a>
+			<form action="#">
+				<div class="form-input">
+					<input type="search" placeholder="Buscar...">
+					<button type="submit" class="search-btn"><i class='bx bx-search'></i></button>
+				</div>
+			</form>
+			<input type="checkbox" id="switch-mode" hidden>
+			<label for="switch-mode" class="switch-mode"></label>
+			<a href="#" class="profile">
+			</a>
+		</nav>
+		<!-- NAVBAR -->
+
+		<!-- MAIN - principal -->
+		<main>
+			<div id="dashboard" class="section-content">
+				<div class="head-title">
+					<div class="left">
+						<h1>Panel de Administración</h1>
+						<ul class="breadcrumb">
+							<li><a href="#">Panel</a></li>
+						</ul>
+					</div>
+				</div>
+				<ul class="box-info">
+	<li class="dashboard-link" data-section="reservas">
+		<i class='bx bxs-calendar-check'></i>
+		<span class="text"><h3>12</h3><p>Reservas</p></span>
+	</li>
+	<li class="dashboard-link" data-section="tours">
+		<i class='bx bxs-map-alt'></i>
+		<span class="text"><h3>6</h3><p>Tours Activos</p></span>
+	</li>
+	<li class="dashboard-link" data-section="galeria">
+		<i class='bx bxs-image'></i>
+		<span class="text"><h3>24</h3><p>Imágenes en Galería</p></span>
+	</li>
+</ul>
+
+			</div>
+<!--Tabla reservas-->
+			<div id="reservas" class="section-content" style="display: none;">
+				<h2>Gestión de Reservas</h2>
+				<div class="reservation-management">
+					<table>
+						<thead>
+							<tr>
+								<th>ID Reserva</th>
+								<th>Nombre Cliente</th>
+								<th>Fecha</th>
+								<th>Tour</th>
+								<th>Acciones</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>001</td>
+								<td>Juan Pérez</td>
+								<td>2023-10-01</td>
+								<td>Tour Aventura</td>
+								<td><button class="edit-btn">Editar</button> <button class="delete-btn">Eliminar</button></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+<!--tours-->
+			<div id="tours" class="section-content" style="display: none;">
+				<h2>Gestión de Tours</h2>
+				<div class="tour-management">
+					<button class="add-tour-btn">Añadir Tour</button>
+					<table>
+						<thead>
+							<tr>
+								<th>Nombre del Tour</th>
+								<th>Descripción</th>
+								<th>Precio</th>
+								<th>Acciones</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>Tour Aventura</td>
+								<td>Explora la naturaleza salvaje.</td>
+								<td>$100</td>
+								<td><button class="edit-btn">Editar</button> <button class="delete-btn">Eliminar</button></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+<!--galeria-->
+			<div id="galeria" class="section-content" style="display: none;">
+				<h2>Galería de Imágenes</h2>
+				<div class="gallery-management">
+					<button class="add-image-btn">Añadir Imagen</button>
+					<div class="gallery-grid">
+						<img src="../static/img/cartagena.png" alt="Cartagena de Indias">
+						<img src="../static/img/castillo-san-felipe.png" alt="Castillo de San Felipe">
+						<img src="../static/img/vista-playa.png" alt="Vista Playa">
+					</div>
+				</div>
+			</div>
+<!--admin-->
+			<div id="admin" class="section-content" style="display: none;">
+				<h2>Administradores</h2>
+				<div class="admin-management">
+					<button class="add-admin-btn">Añadir Administrador</button>
+					<table>
+						<thead>
+							<tr>
+								<th>Nombre</th>
+								<th>Correo Electrónico</th>
+								<th>Acciones</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>Admin 1</td>
+								<td>admin1@example.com</td>
+								<td><button class="edit-btn">Editar</button> <button class="delete-btn">Eliminar</button></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</main>
+		<!-- MAIN -->
+	</section>
+	<!-- CONTENT -->
+
+	<script src="../static/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,197 @@
+/* tours.css */ 
+/*Todo el cuerpo de la página*/
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+    /*Logo*/
+.logo-img {
+    height: 70px;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-left: 50px;
+}
+/*Estilos la sección del Nav*/
+nav{
+    background-color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+/*Estilos para ele ul*/
+nav ul{
+    list-style: none;
+    display: flex;
+    justify-content: end;
+    flex-wrap: wrap;
+    padding: 20px;
+    margin: 0px;
+    cursor: pointer;
+    gap: 20px;
+}
+/*Tamaño del nav*/
+nav ul li{
+    margin: 0 15px; 
+    position: relative;
+    
+}
+/* Línea inferior al pasar el mouse */
+nav ul li::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 2px;
+  width: 0;
+  background-color: #5783c3;
+  transition: width 0.3s;
+}
+/* Mostrar la línea al pasar el mouse o estar activo */
+nav ul li:hover::after,
+nav ul li:focus::after,
+nav ul li:active::after {
+  width: 100%;
+}
+/*Estilos para el texto del Nav*/
+nav ul li a{
+    text-decoration: none;
+    color:#2c2c2c;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+    /*Estilos para las imágenes del contenedor*/
+    .container img {
+      max-width: 100%;
+      height: auto;
+      margin-bottom: 15px;
+      box-shadow: 0 10px 10px rgba(36, 148, 212, 0.1);
+      display: block;
+    }
+.container img:hover {
+      transform: scale(1.05);
+      transition: transform 0.3s ease;
+    }
+.text-limit {
+  max-height: 100px;   /* Altura inicial visible */
+  overflow: hidden;
+  position: relative;
+}
+
+.text-limit.expandido {
+  max-height: none;    /* Muestra todo el texto */
+}
+
+/*Estilos para el formulario, modal en la sección de reserva*/
+.modal-reserva-container {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.modal-reserva-container img {
+  display: block;
+  margin: 0 auto 20px auto;
+  width: 80px;
+  height: auto;
+  border-radius: 10px;
+}
+
+.modal-reserva-container.activo {
+  display: flex;
+}
+
+.modal-reserva-content {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 500px;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+  position: relative;
+}
+
+.form-reserva form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.input-reserva {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.btn-reserva {
+  background-color: #5783c3;
+  color: white;
+  border: none;
+  padding: 10px;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 5px;
+  width: fit-content;
+}
+
+.btn-reserva:hover,
+.cerrar-reserva:hover {
+  background-color: #185e83;
+}
+
+.btn-cerrar {
+  margin-top: 15px;
+  text-align: right;
+  width: fit-content;
+}
+#mensajeExito {
+  display: none;
+  background-color: #dff0d8;
+  color: #3c763d;
+  padding: 10px;
+  border-radius: 5px;
+  margin-top: 10px;
+  text-align: center;
+}
+.cerrar-reserva {
+  background-color: #5783c3;
+  color: white;
+  padding: 7px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+/*última sección footer*/
+footer {
+    background-color:#5783c3;
+    padding: 10px;
+}
+footer p{
+    text-align: center;
+}
+.footer-icons {
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  align-items: center;
+  padding: 10px;
+}
+
+.footer-icons img {
+  width: 30px;
+  height: 30px;
+  transition: transform 0.3s;
+}
+.footer-icons img:hover {
+  transform: scale(1.2);
+}
