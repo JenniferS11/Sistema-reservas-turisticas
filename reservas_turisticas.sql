@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 31-07-2025 a las 05:19:24
+-- Tiempo de generación: 04-08-2025 a las 02:11:43
 -- Versión del servidor: 10.4.32-MariaDB
 -- Versión de PHP: 8.2.12
 
@@ -51,11 +51,20 @@ CREATE TABLE `reservas` (
   `fecha_inicio` date DEFAULT NULL,
   `fecha_fin` date DEFAULT NULL,
   `destino` varchar(255) DEFAULT NULL,
-  `numero_personas` int(55) DEFAULT NULL,
+  `numero_personas` int(11) DEFAULT NULL,
   `mensaje` text DEFAULT NULL,
   `estado_reserva` enum('pendiente','confirmada','cancelada','') DEFAULT 'pendiente',
   `fecha_reserva` timestamp NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Volcado de datos para la tabla `reservas`
+--
+
+INSERT INTO `reservas` (`id`, `id_tour`, `identificacion`, `nombres_completos`, `correo_electronico`, `telefono`, `fecha_inicio`, `fecha_fin`, `destino`, `numero_personas`, `mensaje`, `estado_reserva`, `fecha_reserva`) VALUES
+(2, NULL, '12345678', 'Jenifer Perez', 'jeni@hotmail.com', '31300000', '2025-07-01', '2025-07-02', 'islas_del_rosario', 2, 'Cuanto es el valor, y si hay alguna promocion.', 'confirmada', '2025-08-01 04:06:00'),
+(3, NULL, '1047383831', 'Daniel Andres', 'jensagar08@hotmail.com', '3218148672', '2025-11-11', '2025-12-11', 'islas_del_rosario', 1, 'Buen viaje', 'confirmada', '2025-08-03 02:47:18'),
+(4, NULL, '1047383835', 'Dayana Valdez', 'jensagar08@hotmail.com', '3011332503', '2025-11-11', '2025-11-15', 'tierra_bomba', 2, 'MQSJWNBCDJNS', 'pendiente', '2025-08-03 22:52:46');
 
 -- --------------------------------------------------------
 
@@ -73,19 +82,12 @@ CREATE TABLE `tours` (
   `fecha_creacion` timestamp NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
--- --------------------------------------------------------
-
 --
--- Estructura de tabla para la tabla `usuarios`
+-- Volcado de datos para la tabla `tours`
 --
 
-CREATE TABLE `usuarios` (
-  `id` int(11) NOT NULL,
-  `nombre_completo` varchar(50) NOT NULL,
-  `correo_electronico` varchar(50) NOT NULL,
-  `usuario` varchar(50) NOT NULL,
-  `contrasena` varchar(50) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+INSERT INTO `tours` (`id`, `titulo`, `descripcion`, `imagen`, `precio`, `estado`, `fecha_creacion`) VALUES
+(1, 'Tur la media luna', 'Este tour te lleva por la calle la media luna donde podrás disfrutar de fotos y comidas de muchos sabores, como también musica caribeña hasta llegar a donde una chiva que te ara un recorrido por el Getsemaní .', 'https://viajandoanuestroaire.com/wp-content/uploads/2023/11/DSC01027-1024x768.jpg', 80000.00, 'activo', '2025-08-01 04:30:06');
 
 -- --------------------------------------------------------
 
@@ -102,6 +104,14 @@ CREATE TABLE `usuarios_admin` (
   `estado_admin` enum('activo','inactivo','','') DEFAULT 'activo',
   `fecha_creación` timestamp NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Volcado de datos para la tabla `usuarios_admin`
+--
+
+INSERT INTO `usuarios_admin` (`id`, `usuario`, `contrasena`, `nombre_completo`, `rol`, `estado_admin`, `fecha_creación`) VALUES
+(1, 'admin', 'admin123', 'Administrador Principal', 'admin', 'activo', '2025-08-01 04:16:39'),
+(2, 'jsanchezg21', '123', 'Jennifer Sánchez', 'admin', 'activo', '2025-08-03 02:48:00');
 
 --
 -- Índices para tablas volcadas
@@ -127,12 +137,6 @@ ALTER TABLE `tours`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indices de la tabla `usuarios`
---
-ALTER TABLE `usuarios`
-  ADD PRIMARY KEY (`id`);
-
---
 -- Indices de la tabla `usuarios_admin`
 --
 ALTER TABLE `usuarios_admin`
@@ -152,25 +156,19 @@ ALTER TABLE `galeria`
 -- AUTO_INCREMENT de la tabla `reservas`
 --
 ALTER TABLE `reservas`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT de la tabla `tours`
 --
 ALTER TABLE `tours`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
-
---
--- AUTO_INCREMENT de la tabla `usuarios`
---
-ALTER TABLE `usuarios`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT de la tabla `usuarios_admin`
 --
 ALTER TABLE `usuarios_admin`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- Restricciones para tablas volcadas
@@ -180,7 +178,7 @@ ALTER TABLE `usuarios_admin`
 -- Filtros para la tabla `reservas`
 --
 ALTER TABLE `reservas`
-  ADD CONSTRAINT `reservas_ibfk_2` FOREIGN KEY (`id`) REFERENCES `usuarios_admin` (`id`);
+  ADD CONSTRAINT `reservas_ibfk_1` FOREIGN KEY (`id_tour`) REFERENCES `tours` (`id`);
 
 --
 -- Filtros para la tabla `tours`
